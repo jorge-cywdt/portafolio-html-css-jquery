@@ -1,0 +1,259 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* Reseteamos los margenes y los acolchados
+    en nuestro navegador, cuando es 0
+    no es necesario poner px */
+	/* Para utilizar el modelo caja,
+    esto permite que cuando se defina
+    un ancho de 600px y si le ponemos
+    un margin de 50px, el ancho se
+    mantendra en 600px */
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	/* color: #000; */ /* Valor por defecto */
+    /* font-size: 16px; */ /* Valor por defecto */
+
+	line-height: 1;
+    /* line-height: 1.15 */ /* Valor por defecto de normalize */
+
+	/* KKK */
+	background: url('../img/bg.png') #000;
+	background-size: cover; /* Cubierta */
+	background-attachment: fixed; /* Apego, arreglado ó fijo */
+	/* Es mejor background que background-image ó background-color,
+    background respalda fondo (imagen) con un color */
+	/* 100% del ancho de la pantalla */
+	/* Fondo se quedara pegado a la pantalla */
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 700px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: 1;
+	/* 90% del ancho de la pantalla */
+	/* 100% del alto de la pantalla */
+	/* Contenedor o elemento centrado */
+	/* Arriba - abajo, izquierda - derecha */
+	/* Espacio entre lineas */
+
+	display: flex;
+    justify-content: center;
+    align-content: center;
+	/* Flexbox, siempre se usa en el contenedor padre.
+    Elementos del contenedor centrados
+    vertical y horizontalmente */
+}
+
+.tarjeta {
+	width: 100%;
+	margin: 40px 0;
+	border-radius: 5px;
+	background: #fff;
+	overflow: hidden;
+	z-index: 1000;
+	/* Repara errores y oculta todo
+    el contenido que no este dentro
+    del contenedor */
+}
+
+/*************** Banderola deslizante ***************/
+
+.slider-banner {
+	overflow: hidden;
+	position: relative;
+	z-index: 1000;
+	/* Para utilizar posición absoluta,
+    el padre debe estar en relative,
+    luego los hijos tendran absolute */
+}
+
+.slider-banner .banner {
+	position: relative;
+	width: 100%;
+}
+
+.slider-banner .banner img {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	vertical-align: top;
+	/* Al igual que line-height,
+	elimina espaciado entre imagenes */
+}
+
+/***** flecha-banner *****/
+
+.slider-banner .flecha-banner {
+	position: absolute;
+	top: 50%;
+	color: rgba(0,0,0,0.2);
+	font-size: 35px;
+	line-height: 35px;
+	display: inline-block;
+	z-index: 1100;
+	/* Los enlaces siempre deben tener
+    display: inline-block; */
+}
+
+.slider-banner .flecha-banner:hover {
+	color: rgba(0,0,0,0.5);
+}
+
+.slider-banner .anterior {
+	left: 15px;
+}
+
+.slider-banner .siguiente {
+	right: 15px;
+}
+
+/*************** Información deslizante ***************/
+
+.slider-info {
+	position: relative;
+	padding: 20px 0;
+	text-align: center;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.slider-info .informacion {
+	position: relative;
+	width: 100%;
+}
+
+.slider-info .informacion article {
+	position: relative;
+	width: 100%;
+}
+
+.slider-info .informacion article .slide {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	padding: 20px 80px;
+}
+
+/***** flecha-info *****/
+
+.slider-info .flecha-info {
+	position: absolute;
+	top: 50%;
+	color: #e6e6e6;
+	font-size: 35px;
+	line-height: 35px;
+	display: inline-block;
+	z-index: 1100;
+	/* Los enlaces siempre deben tener
+    display: inline-block; */
+}
+
+.slider-info .flecha-info:hover {
+	color: #6ed279;
+}
+
+.slider-info .anterior {
+	left: 15px;
+}
+
+.slider-info .siguiente {
+	right: 15px;
+}
+
+/***** Estilos para la información del Slide 1 *****/
+
+.slider-info .informacion .nombre {
+	margin: 0 0 16px 0;
+	color: #444;
+	font-size: 38px;
+	font-weight: 600;
+	line-height: 38px;
+}
+
+.slider-info .informacion .trabajo {
+	margin-bottom: 16px;
+	color: #55acee;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.slider-info .informacion .pais {
+	color: #8d8d8d;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.slider-info .informacion .pais img {
+	margin-right: 5px;
+}
+
+/***** Estilos para la información del Slide 2 y Slide 3 *****/
+
+.slider-info .informacion .subtitulo {
+	margin-bottom: 16px;
+	color: #444;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+}
+
+.slider-info .informacion .texto {
+	color: #55acee;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/***** Estilos para los botones verdes de los Slide *****/
+
+.slider-info .botones-verdes {
+	width: 100%;
+}
+
+.slider-info .botones-verdes span {
+	width: 14px;
+	height: 14px;
+	margin: 0 10px;
+	border-radius: 50%;
+	background: #e6e6e6;
+	display: inline-block;
+}
+
+.slider-info .botones-verdes .active {
+	background: #6ed279;
+}
+
+/*************** Redes Sociales ***************/
+
+.redes-sociales {
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.redes-sociales a {
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	padding: 14px 0;
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	line-height: 20px;
+	display: inline-block;
+	/* Los enlaces siempre deben tener
+    display: inline-block; */
+}
+
+.redes-sociales .twitter { background: #55acee; }
+.redes-sociales .facebook { background: #3b5998; }
+.redes-sociales .linkedin { background: #1769ff; }

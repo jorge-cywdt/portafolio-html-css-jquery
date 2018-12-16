@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acerca de Jorge Ernesto</title>
+    <link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,600i,700" rel="stylesheet">
+    <!-- Font Awesome (SVG with JS) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> <!-- CDN de Font Awesome -->
+    <!-- <script src="js/fontawesome-all.min.js"></script> --> <!-- En la carpeta js se agrega font-awesome-all.js ó fontawesome-all.min.js (versión minificada) que pesa menos -->
+    <link rel="stylesheet" href="css/estilos (fixed).css">
+</head>
+<body>
+	<div id="contenedor" class="contenedor">
+		<section class="tarjeta">
+
+			<section class="slider-banner"> <!-- Banderola deslizante (Formato publicitario de internet) -->
+                <div id="banner" class="banner">
+                    <img class="slide active" src="img/banner-dev.jpg" alt="banner">
+                    <img class="slide" src="img/banner2-dev.jpg" alt="banner2">
+                    <img class="slide" src="img/banner3-dev.jpg" alt="banner3">
+                    <img class="slide" src="img/banner4-dev.jpg" alt="banner4">
+                </div>
+
+                <a id="banner-prev" class="flecha-banner anterior" href="#"><i class="fas fa-chevron-left"></i></a> <!-- id para JavaScript, class para CSS -->
+                <a id="banner-next" class="flecha-banner siguiente" href="#"><i class="fas fa-chevron-right"></i></a>
+			</section>
+
+			<section class="slider-info"> <!-- Información deslizante -->
+                <a id="info-prev" class="flecha-info anterior" href="#"><i class="fas fa-chevron-left"></i></a>
+                <a id="info-next" class="flecha-info siguiente" href="#"><i class="fas fa-chevron-right"></i></a>
+
+                <section id="informacion" class="informacion">
+                    <article id="info">
+                        <div class="slide active">
+                            <h1 class="nombre">Jorge Ernesto</h1>
+                            <p class="trabajo">Desarrolador Web</p>
+                            <p class="pais"><img src="img/bandera2.png" alt="bandera2">Perú</p>
+                        </div>
+                        <div class="slide">
+                            <h2 class="subtitulo">Incididunt ut labore et</h2>
+							<p class="texto">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div class="slide">
+							<h2 class="subtitulo">Cras pretium, quam sit amet.</h2>
+							<p class="texto">Nam semper, erat at eleifend pretium, sem nunc aliquam eros, ut ultricies dui felis vel augue. Etiam viverra dolor mauris, nec vehicula libero venenatis eu.
+							<br /><br />
+							Aliquam nec tortor magna. Suspendisse condimentum feugiat malesuada. Quisque pretium ac nulla vitae tristique. Vivamus fringilla purus ut viverra porta.</p>
+						</div>
+                    </article>
+                    <div id="botones-verdes" class="botones-verdes">
+                        <!-- <span class="active"></span>
+                        <span></span>
+                        <span></span> -->
+                    </div>
+                </section>
+            </section>
+
+            <section class="redes-sociales">
+				<a class="twitter" target="_blank" href="https://twitter.com/jorge_cywdt"><i class="fab fa-twitter"></i></a>
+                <a class="facebook" target="_blank" href="https://www.facebook.com/jorge.cywdt"><i class="fab fa-facebook"></i></a>
+                <a class="linkedin" target="_blank" href="https://www.instagram.com/jorge.cywdt"><i class="fab fa-linkedin-in"></i></a>
+			</section>
+
+		</section> <!-- class="tarjeta" -->
+	</div> <!-- class="contenedor" -->
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- Cargamos Jquery desde la CDN de Google, una CDN permite acelerar la carga de las páginas -->
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
